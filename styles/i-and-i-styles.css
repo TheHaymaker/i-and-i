@@ -1,0 +1,165 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.marquee {
+  background-image: url('../assets/bg-colors.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0px 20px;
+  box-sizing: border-box;
+}
+
+.Grid {
+  display: flex;
+}
+
+.Grid-cell {
+  flex: 1;
+}
+
+/*  Grid Style Modifiers  */
+
+/* With gutters */
+.Grid--gutters {
+  margin: -1em 0 0 -1em;
+}
+.Grid--gutters > .Grid-cell {
+  padding: 1em 0 0 1em;
+}
+
+/* Alignment per row */
+.Grid--top {
+  align-items: flex-start;
+}
+.Grid--bottom {
+  align-items: flex-end;
+}
+.Grid--center {
+  align-items: center;
+}
+
+/* Alignment per cell */
+.Grid-cell--top {
+  align-self: flex-start;
+}
+.Grid-cell--bottom {
+  align-self: flex-end;
+}
+.Grid-cell--center {
+  align-self: center;
+}
+
+/* Responsive Modifiers (a mobile-first approach) */
+
+/* Base classes for all media */
+.Grid--fit > .Grid-cell {
+  flex: 1;
+}
+.Grid--full > .Grid-cell {
+  flex: 0 0 100%;
+}
+.Grid--1of2 > .Grid-cell {
+  flex: 0 0 50%
+}
+.Grid--1of3 > .Grid-cell {
+  flex: 0 0 33.3333%
+}
+.Grid--1of4 > .Grid-cell {
+  flex: 0 0 25%
+}
+
+/* Small to medium screens */
+@media (min-width: 24em) {
+  .small-Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+  .small-Grid--full > .Grid-cell {
+    flex: 0 0 100%;
+  }
+  .small-Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%
+  }
+  .small-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%
+  }
+  .small-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%
+  }
+}
+
+/* Large screens */
+@media (min-width: 48em) {
+  .large-Grid--fit > .Grid-cell {
+    flex: 1;
+  }
+  .large-Grid--full > .Grid-cell {
+    flex: 0 0 100%;
+  }
+  .large-Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%
+  }
+  .large-Grid--1of3 > .Grid-cell {
+    flex: 0 0 33.3333%
+  }
+  .large-Grid--1of4 > .Grid-cell {
+    flex: 0 0 25%
+  }
+}
+
+.Grid-cell img {
+  max-width: 100%;
+}
