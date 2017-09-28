@@ -379,6 +379,46 @@ footer .Grid .Grid-cell img {
   .Grid .Grid .Grid-cell {
     margin-bottom: 30px;
   }
+
+  .Grid--gutters > .Grid-cell {
+    padding: 0px;
+  }
+
+  .Grid-cell {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+
+  .copy--8x {
+    font-size: 35px;
+    line-height: 1.2;
+  }
+
+  .copy--5x {
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 20px 60px 20px 30px;
+
+  }
+
+  .btn:after {
+    content: '';
+    pointer-events: none;
+    right: 20px;
+    top: 17px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../assets/button-arrow-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+  }
+
+
 }
 
 .Grid-cell img {
